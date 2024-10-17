@@ -1,0 +1,244 @@
+// Reset global
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Noto Sans", sans-serif;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  .menu {
+    background-color: #FF69B4;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1vw;
+    width: 100vw;
+  
+    .logo {
+      display: flex;
+      align-items: center;
+  
+      img {
+        height: 5vw;
+        max-height: 50px;
+        margin-right: 10px;
+      }
+  
+      span {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  
+    ul {
+      display: flex;
+  
+      li {
+        margin-left: 2vw;
+  
+        a {
+          color: white;
+          font-weight: bold;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  .section-light {
+    background-color: #FFD9EC;
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vw;
+  
+    p {
+      width: 40%;
+      font-size: clamp(1rem, 2vw, 25px);
+    }
+  
+    img {
+      width: clamp(150px, 19vw, 300px); 
+      max-width: 100%; 
+    }
+  }
+  
+  .section-dark {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 35vh;
+    background-color: #FF69B4;
+    flex-direction: row-reverse;
+    padding: 2vw;
+  
+    p {
+      width: 50%;
+      font-size: clamp(1rem, 2vw, 25px);
+      color: #E4EEF1;
+    }
+  
+    img {
+      width: clamp(200px, 27vw, 350px); 
+      max-width: 100%;
+    }
+  }
+  
+  .image-gallery {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    padding: 2vw;
+  
+    img {
+      width: clamp(80px, 15%, 200px); // Ajuste dinâmico com tamanho mínimo e máximo
+      padding: 0;
+      border-radius: 0;
+      max-width: 100%;
+    }
+  }
+  
+  footer {
+    background-color: #FF69B4;
+    padding: 2vw;
+    color: white;
+    font-weight: bold;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    text-align: center; 
+
+    .social-nav {
+        display: flex; 
+        align-items: center; 
+        width: 100%;
+        justify-content: space-between; 
+    }
+
+    .social-icons {
+        display: flex; 
+        gap: 1vw; 
+
+        img {
+            width: 3vw;
+            height: auto;
+            max-width: 40px;
+        }
+    }
+
+    .copyright {
+        text-align: center; /* Centraliza o texto do copyright */
+        flex: 1; /* Faz o copyright ocupar o espaço restante entre os ícones e o logo */
+        margin: 0 1vw; /* Margem para espaçamento lateral */
+    }
+
+    .social-right {
+        img {
+            width: 20vw;
+            height: auto;
+            max-width: 90px;
+        }
+    }
+}
+  
+  @media (max-width: 1024px) { 
+    .menu {
+      height: 10vw;
+  
+      .logo img {
+        height: 7vw;
+        max-height: 50px;
+      }
+  
+      ul li {
+        margin-left: 3vw;
+      }
+    }
+  
+    .section-light, .section-dark {
+      flex-direction: column;
+      text-align: center;
+  
+      p {
+        width: 80%;
+      }
+  
+      img {
+        width: 50%;
+        max-width: 300px;
+        margin-top: 2vw;
+      }
+    }
+  
+    .image-gallery img {
+      width: 22%;
+    }
+  }
+  
+  @media (max-width: 768px) {  
+    .menu {
+      flex-direction: column;
+      height: auto;
+      padding: 2vw;
+  
+      .logo span {
+        font-size: 1.2rem;
+      }
+  
+      ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1vw;
+  
+        li {
+          margin: 1vw 0;
+        }
+      }
+    }
+  
+    .section-light, .section-dark {
+      height: auto;
+      padding: 4vw;
+  
+      p {
+        width: 90%;
+        font-size: 4vw;
+      }
+  
+      img {
+        width: 70%;
+        max-width: 250px;
+      }
+    }
+  
+    .image-gallery {
+      flex-direction: column;
+      align-items: center;
+  
+      img {
+        width: 80%;
+        max-width: 250px;
+        margin: 1vw 0;
+      }
+    }
+  
+    footer {
+      padding: 3vw;
+      font-size: 1rem;
+    }
+  }
+  
